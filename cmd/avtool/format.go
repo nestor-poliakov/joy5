@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/nareix/joy5/format"
-	"github.com/nareix/joy5/format/flv"
-	"github.com/nareix/joy5/format/flv/flvio"
-	"github.com/nareix/joy5/format/rtmp"
+	"github.com/nestor-poliakov/joy5/format"
+	"github.com/nestor-poliakov/joy5/format/flv"
+	"github.com/nestor-poliakov/joy5/format/flv/flvio"
+	"github.com/nestor-poliakov/joy5/format/rtmp"
 )
 
 var debugRtmpChunkData = false

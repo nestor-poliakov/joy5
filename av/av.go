@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/nareix/joy5/codec/aac"
-	"github.com/nareix/joy5/codec/h264"
+	"github.com/nestor-poliakov/joy5/codec/aac"
+	"github.com/nestor-poliakov/joy5/codec/h264"
 )
 
 const (

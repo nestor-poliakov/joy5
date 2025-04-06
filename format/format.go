@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nareix/joy5/format/flv"
+	"github.com/nestor-poliakov/joy5/format/flv"
 
-	"github.com/nareix/joy5/av"
-	"github.com/nareix/joy5/format/rtmp"
+	"github.com/nestor-poliakov/joy5/av"
+	"github.com/nestor-poliakov/joy5/format/rtmp"
 )
 
 type dummyCloser struct{}

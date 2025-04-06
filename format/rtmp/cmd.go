@@ -3,9 +3,9 @@ package rtmp
 import (
 	"fmt"
 
-	"github.com/nareix/joy5/av"
-	"github.com/nareix/joy5/format/flv"
-	"github.com/nareix/joy5/format/flv/flvio"
+	"github.com/nestor-poliakov/joy5/av"
+	"github.com/nestor-poliakov/joy5/format/flv"
+	"github.com/nestor-poliakov/joy5/format/flv/flvio"
 )
 
 const (
@@ -41,7 +41,7 @@ func (c *Conn) writeBasicConf() (err error) {
 	if err = c.writeSetPeerBandwidth(2500000, 2); err != nil {
 		return
 	}
-	if err = c.setAndWriteChunkSize(65536); err != nil {
+	if err = c.setAndWriteChunkSize(16384); err != nil {
 		return
 	}
 	return
@@ -357,9 +357,9 @@ func (c *Conn) writeConnect(path string) (err error) {
 }
 
 func (c *Conn) connectPublish() (err error) {
-	connectpath, publishpath := splitPath(c.URL)
+	_, publishpath := splitPath(c.URL)
 
-	if err = c.writeConnect(connectpath); err != nil {
+	if err = c.writeConnect(c.URL.Path[1:]); err != nil {
 		return
 	}
 
@@ -400,7 +400,7 @@ func (c *Conn) connectPublish() (err error) {
 	}
 
 	transid++
-	if err = c.writeCommand(4, c.avmsgsid, "publish", transid, nil, publishpath, connectpath); err != nil {
+	if err = c.writeCommand(4, c.avmsgsid, "publish", transid, nil, publishpath, "live"); err != nil {
 		return
 	}
 

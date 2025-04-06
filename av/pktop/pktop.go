@@ -3,7 +3,7 @@ package pktop
 import (
 	"time"
 
-	"github.com/nareix/joy5/av"
+	"github.com/nestor-poliakov/joy5/av"
 )
 
 type NativeRateLimiter struct {

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/nareix/joy5/av"
-	"github.com/nareix/joy5/av/pktop"
-	"github.com/nareix/joy5/format"
+	"github.com/nestor-poliakov/joy5/av"
+	"github.com/nestor-poliakov/joy5/av/pktop"
+	"github.com/nestor-poliakov/joy5/format"
 )
 
 var optDontPrintPkt = false

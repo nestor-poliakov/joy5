@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/nareix/joy5/av"
-	"github.com/nareix/joy5/codec/h264"
-	"github.com/nareix/joy5/format/flv"
+	"github.com/nestor-poliakov/joy5/av"
+	"github.com/nestor-poliakov/joy5/codec/h264"
+	"github.com/nestor-poliakov/joy5/format/flv"
 )
 
 func doAvcc2Annexb(src, dst string) error {
